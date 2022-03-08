@@ -9,8 +9,7 @@ html {
 body {
 	font-family: Arial, Helvetica, sans-serif;
     font-size: 100%;
-    width: 98%;
-	max-width: 960px;
+    width: 800px;
     margin: 0 auto;
     border: 3px solid #931420;
     background-color: #fffded;
@@ -41,58 +40,54 @@ header h3 {
 }
 header img {
 	float: left;
-	padding: 0 .7em;
+	padding: 0 30px;
 }
 .shadow {
 	text-shadow: 2px 2px 2px #800000;
 }
-#mobile_menu{
-	display: none;
-}
-/* the styles for the navigation menu */
-#nav_menu ul {
-	list-style-type: none;
+#nav_menu ul{
+	list-style: none;
 	margin: 0;
 	padding: 0;
 	position: relative;
-	width: 100%;
 }
-#nav_menu ul li {
+#nav_menu ul li{
 	float: left;
 	width: 20%;
 }
-#nav_menu ul li a {
-    display: block;
-    text-align: center;
-    padding: 1em 0;
-    text-decoration: none;
-    background-color: #800000;
-    color: white;
-    font-weight: bold;
+#nav_menu ul li a{
+	display: block;
+	text-align: center;
+	padding: 1em;
+	text-decoration: none;
+	background-color: #800000;
+	color: white;
+	font-weight: bold;
 }
-#nav_menu a.current {
-	color: yellow;
+#nav_menu ul ul{
+	display: none;
+	position: absolute;
+	top: 100%;
+	bottom: 100%;
 }
-#nav_menu ul ul {
-    display: none;
-    position: absolute;
-    top: 100%;
-}
-#nav_menu ul ul li {
+#nav_menu ul ul li{
 	float: none;
+	width: 100%;
 }
-#nav_menu ul li:hover > ul {
+#nav_menu ul li:hover > ul{
 	display: block;
 }
-#nav_menu > ul::after {
-    content: "";
+#nav_menu > ul::after{      /*makes it so that the first list item in sub isn't in place of parent*/
+    content: "";    
     clear: both;
     display: block;
 }
-
+#current:visited{
+	color: yellow;
+}
 /* the styles for the section */
 section {
-	width: 70%;
+	width: 525px;
 	float: right;
 	padding: 0 20px 20px 20px;
 }
@@ -135,8 +130,6 @@ article h3 {
 	padding-bottom: .25em;
 }
 article img {
-	max-width: 40%;
-	min-width: 150px;
 	float: right;
 	margin: .5em 0 1em 1em;
 	border: 1px solid black;
@@ -144,16 +137,15 @@ article img {
 
 /* the styles for the aside */
 aside {
-	width: 23%;
-	float: left;
-	padding: 0 0 1em 1em;
+	width: 215px;
+	float: right;
+	padding: 0 0 20px 20px;
 }
 aside h2 {
 	color: #800000;
 	font-size: 130%;
 	padding: .5em 0 .25em 0;
 }
-
 aside h3 {
 	font-size: 105%;
 	padding-bottom: .25em;
@@ -172,55 +164,4 @@ footer p {
 	text-align: center;
 	color: white;
 	padding: 1em 0;
-}
-@media only screen and (max-width: 875px){
-	aside h3 a{
-		font-size: 85%;
-	}
-	section h1{
-		font-size: 125%;
-	}
-	section h2{
-		font-size: 110%;
-	}
-	aside{
-		float: none;
-	}
-}
-@media only screen and (max-width: 745px){
-	header img{
-		float: none;
-		margin: 0 auto;
-	}
-	header{
-		text-align: center;
-	}
-	section {
-		float: none;
-		width: 95%;
-	}
-	aside{
-		padding: 1em 5%;
-		width: 95%;
-	}
-	article img{
-		width: 30%;
-	}
-	aside div {
-		column-count: 2;
-	}
-	#nav_menu{
-		display: none;
-	}
-	#mobile_menu{
-		display: block;
-	}
-	.slicknav_menu{
-		background-color: #800000 !important;
-	}
-}
-@media only screen and (max-width: 420px){
-	html{
-		font-size: 90%;
-	}
 }
